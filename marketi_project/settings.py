@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-11180t4m*oz*&ukeq+pi@%cm&j$8ogbevhd!2-%@p0n#!igava
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["127.0.0.1", "10.0.2.2", "192.168.1.3", "localhost", "*"]
+ALLOWED_HOSTS = [".vercel.app" ,"192.168.1.3", ]
 
 
 # Application definition
@@ -66,12 +66,12 @@ MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
 
 ]
-CORS_ALLOW_ALL_ORIGINS = True  # For development only!
+# CORS_ALLOW_ALL_ORIGINS = True  # For development only!
 
-CORS_ALLOWED_ORIGINS = [
-    "http://192.168.1.3:8000",
-    "http://localhost:8000",
-]
+# CORS_ALLOWED_ORIGINS = [
+#     "http://192.168.1.3:8000",
+#     "http://localhost:8000",
+# ]
 
 ROOT_URLCONF = 'marketi_project.urls'
 
@@ -117,12 +117,12 @@ REST_FRAMEWORK = {
 }
 
 # (Optional) To support logout by blacklisting refresh tokens
-SIMPLE_JWT = {
-    'ROTATE_REFRESH_TOKENS': False,
-    'BLACKLIST_AFTER_ROTATION': True,
-    'ACCESS_TOKEN_LIFETIME': timedelta(seconds=10),  
-    'REFRESH_TOKEN_LIFETIME': timedelta(seconds=5),
-}
+# SIMPLE_JWT = {
+#     'ROTATE_REFRESH_TOKENS': False,
+#     'BLACKLIST_AFTER_ROTATION': True,
+#     'ACCESS_TOKEN_LIFETIME': timedelta(seconds=10),  
+#     'REFRESH_TOKEN_LIFETIME': timedelta(seconds=5),
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
